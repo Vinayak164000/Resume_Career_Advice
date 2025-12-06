@@ -2,7 +2,7 @@ import os
 from langchain.agents import create_agent
 from langchain.agents.structured_output import ToolStrategy
 from utils import Context, CareerAdvice, create_bot
-from load_dotenv import load_dotenv
+from dotenv import load_dotenv
 load_dotenv()
 os.environ["GOOGLE_API_KEY"] = os.getenv("GEMINI_API_KEY")
 
