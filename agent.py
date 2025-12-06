@@ -23,7 +23,7 @@ class AgentBuilder:
         self.model = create_bot()
         self.system_prompt = SYSTEM_PROMPT
     
-    def agent(self):
+    def my_agent(self):
         return create_agent(
             model=self.model,
             system_prompt=self.system_prompt,
@@ -32,7 +32,7 @@ class AgentBuilder:
         )
 
     def agent_response(self, user_input, config=None):
-        agent = self.agent()
+        agent = self.my_agent()
         response = agent.invoke(
             {"messages": [{"role": "user", "content": user_input}]},
             config={"configurable": {"thread_id": "1"}},
